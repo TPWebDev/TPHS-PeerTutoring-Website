@@ -1,2 +1,2 @@
 # Peer-Tutoring-Website
-Website for TPHS Peer Tutoring
+Files for Torrey Pines High School Peer Tutoring's official website.
