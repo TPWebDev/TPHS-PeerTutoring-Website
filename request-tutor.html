@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Request a Tutor - TPHS Peer Tutoring</title>
+    <link rel="stylesheet" href="css/styles.css"/>
+    <script defer src="js/script.js"></script>
+</head>
+<body>
+    <header>
+       <!-- <a class="home-link" href="index.html">TPHS Peer Tutoring</a> -->
+    </header>
+
+    <nav>
+        <ul class="main-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="questions.html">Questions</a></li>
+            <li><a href="roster.html">Roster</a></li>
+            <li><a href="contacts.html">Contacts</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="form-section">
+            <h2>Request a Tutor</h2>
+            <p>Complete the form below and we will match you with a suitable tutor.</p>
+            <form id="tutorRequestForm">
+                <label for="r-name">Name:</label>
+                <input type="text" id="r-name" name="name" placeholder="Your Name" required />
+
+                <label for="r-email">Email:</label>
+                <input type="email" id="r-email" name="email" placeholder="Your Email" required />
+
+                <label for="r-subject">Subject:</label>
+                <input type="text" id="r-subject" name="subject" placeholder="Subject you need help with" required />
+
+                <label for="r-time">Preferred Meeting Time:</label>
+                <input type="text" id="r-time" name="time" placeholder="e.g., Monday after school" required />
+
+                <!-- Placeholder submission handling -->
+                <button type="submit">Submit</button>
+            </form>
+            <div id="requestMessage"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 TPHS Peer Tutoring Club. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
