@@ -1,0 +1,224 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body & Typography */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #000; /* Black text for readability */
+    background-color: #fff; /* White background */
+}
+
+/* Banner & Header Section */
+.banner {
+    text-align: center;
+    color: #000;
+    position: relative;
+    padding: 80px 20px;
+    /* Set your banner image here. It should be in the images folder. */
+    background: url('images/TPHSLogo.png') no-repeat center center;
+    background-size: cover;
+}
+
+.banner h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px #fff; /* Ensures readability against light background */
+    font-weight: bold;
+}
+
+.banner p {
+    font-size: 1.2rem;
+    text-shadow: 1px 1px #fff;
+}
+
+/* Navigation */
+nav {
+    background: #000; /* Black nav bar */
+}
+
+.main-nav {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.main-nav li {
+    margin: 0;
+    position: relative;
+}
+
+.main-nav a {
+    color: #fff; /* White text */
+    text-decoration: none;
+    padding: 15px 20px;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+.main-nav a:hover {
+    background: #BF0A30; /* Red hover */
+}
+
+/* Main Content */
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    color: #000;
+}
+
+/* Intro/General Sections */
+.intro, .about-section, .form-section, .contact-info, .gallery-section {
+    margin-bottom: 40px;
+}
+
+/* About Page */
+.club-logo {
+    max-width: 200px;
+    display: block;
+    margin: 20px auto;
+}
+
+.about-section h2, .about-section h3 {
+    text-align: center;
+    margin: 20px 0;
+    color: #000;
+}
+
+.about-section p, .about-section ul {
+    max-width: 700px;
+    margin: 0 auto 20px auto;
+    text-align: center;
+    color: #000;
+}
+
+.about-section ul {
+    list-style: disc;
+    padding-left: 40px;
+    text-align: left;
+}
+
+/* Forms */
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #000;
+}
+
+form input[type="text"], 
+form input[type="email"], 
+form textarea {
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    background: #BF0A30; /* Red button */
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+form button:hover {
+    background: #FFD700; /* Yellow hover */
+    color: #000;
+}
+
+#questionsMessage, #requestMessage {
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+    color: #000;
+}
+
+/* Roster Page */
+.roster-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.tutor-card {
+    background: #f9f9f9;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+.tutor-img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.position {
+    font-style: italic;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.bio {
+    color: #333;
+}
+
+/* Contacts Page */
+.contact-info ul {
+    list-style: none;
+    text-align: left;
+    max-width: 500px;
+    margin: 20px auto;
+    color: #000;
+}
+
+.contact-info li {
+    margin-bottom: 10px;
+}
+
+.map-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Gallery Page */
+.gallery-section .month-gallery {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.gallery-section .month-gallery h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.gallery-section .month-gallery a {
+    color: #BF0A30;
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #f5f5f5;
+    color: #000;
+    margin-top: 40px;
+}
