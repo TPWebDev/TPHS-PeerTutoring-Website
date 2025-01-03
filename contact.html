@@ -13,17 +13,37 @@
     <nav>
         <ul class="main-nav">
             <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="questions.html">Questions</a></li>
             <li><a href="request-tutor.html">Request a Tutor</a></li>
             <li><a href="roster.html">Roster</a></li>
+            <li><a href="contact.html">Contact</a></li>
             <li><a href="gallery.html">Gallery</a></li>
         </ul>
     </nav>
 
     <main>
+        <section class="form-section">
+            <h2>Have Questions?</h2>
+            <p>Reach out to us. We'll get back to you as soon as possible.</p>
+            <form id="questionsForm">
+                <label for="q-name">Name:</label>
+                <input type="text" id="q-name" name="name" placeholder="Your Name" required />
+
+                <label for="q-email">Email:</label>
+                <input type="email" id="q-email" name="email" placeholder="Your Email" required />
+
+                <label for="q-question">Your Question:</label>
+                <textarea id="q-question" name="question" placeholder="Write your question here..." required></textarea>
+                
+                <!-- Replace with president_email@example.com or VP email -->
+                <input type="hidden" name="recipient" value="dongyeop0810@gmail.com" />
+
+                <button type="submit">Submit</button>
+            </form>
+            <div id="questionsMessage"></div>
+        </section>
+
         <section class="contact-info">
-            <h2>Contact Us</h2>
+            <h2>Direct Contact</h2>
             <ul>
                 <li>President: <a href="mailto:president_email@example.com">tashirok4861@my.sduhsd.net</a></li>
                 <li>Vice President: <a href="mailto:vp_email@example.com">dongyeop0810@gmail.com</a></li>
@@ -31,7 +51,7 @@
                 <li>Phone: (619) 743-0850</li>
             </ul>
 
-            <h3>Our Location</h3>
+            <h2>Our Location</h2>
             <div class="map-container">
                 <iframe 
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6695.518978566051!2d-117.22761872455479!3d32.95735877358883!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dc08865ef1d91d%3A0x284b86d989ffdbde!2sTorrey%20Pines%20High%20School!5e0!3m2!1sen!2sus!4v1733826980127!5m2!1sen!2sus"  
