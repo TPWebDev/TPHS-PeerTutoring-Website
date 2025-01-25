@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Request a Tutor - TPHS Peer Tutoring</title>
     <link rel="stylesheet" href="css/styles.css"/>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
     <script defer src="js/script.js"></script>
 </head>
 <body>
@@ -38,9 +41,46 @@
                 <label for="r-time">Preferred Meeting Time:</label>
                 <input type="text" id="r-time" name="time" placeholder="e.g., Monday after school" required />
 
-                <!-- Placeholder submission handling -->
                 <button type="submit">Submit</button>
             </form>
+            
+            <!-- Initialize EmailJS -->
+            <script type="text/javascript">
+                (function() {
+                    emailjs.init("11Ne7emxQjNkHYEjx"); // Replace with your EmailJS user ID
+                })();
+            </script>
+
+            <!-- Submit Form to EmailJS -->
+            <script type="text/javascript">
+                document.getElementById("tutorRequestForm").addEventListener("submit", function(event) {
+                    event.preventDefault(); // Prevent default form submission
+
+                    console.log("Form submitted!"); // Check if the event is firing
+
+                    // Capture form data
+                    var name = document.getElementById("r-name").value;
+                    var email = document.getElementById("r-email").value;
+                    var subject = document.getElementById("r-subject").value;
+                    var time = document.getElementById("r-time").value;
+
+                    // Send form data using EmailJS
+                    emailjs.send("service_parx5cw", "template_1j8h8t3", {
+                        name: name,
+                        email: email,
+                        subject: subject,
+                        time: time,
+                    })
+                    .then(function(response) {
+                        console.log("SUCCESS!", response.status, response.text);
+                        alert("Form submitted successfully!");
+                        document.getElementById("tutorRequestForm").reset();
+                    }, function(error) {
+                        console.log("FAILED...", error);
+                        alert("Form submission failed. Please try again.");
+                    });
+                });
+            </script>
             <div id="requestMessage"></div>
         </section>
     </main>
