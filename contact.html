@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Contacts - TPHS Peer Tutoring</title>
     <link rel="stylesheet" href="css/styles.css"/>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
 </head>
 <body>
     <header>
@@ -13,8 +16,8 @@
     <nav>
         <ul class="main-nav">
             <li><a href="index.html">Home</a></li>
-            <li><a href="request-tutor.html">Request a Tutor</a></li>
             <li><a href="roster.html">Roster</a></li>
+            <li><a href="request-tutor.html">Request a Tutor</a></li>
             <li><a href="contact.html">Contact</a></li>
             <li><a href="gallery.html">Gallery</a></li>
         </ul>
@@ -40,6 +43,42 @@
                 <button type="submit">Submit</button>
             </form>
             <div id="questionsMessage"></div>
+
+            <!-- Initialize EmailJS -->
+            <script type="text/javascript">
+                (function() {
+                    emailjs.init("11Ne7emxQjNkHYEjx"); // Replace with your EmailJS user ID
+                })();
+            </script>
+
+            <!-- Submit Form to EmailJS -->
+            <script type="text/javascript">
+                document.getElementById("questionsForm").addEventListener("submit", function(event) {
+                    event.preventDefault(); // Prevent default form submission
+
+                    console.log("Form submitted!"); // Check if the event is firing
+
+                    // Capture form data
+                    var name = document.getElementById("q-name").value;
+                    var email = document.getElementById("q-email").value;
+                    var question = document.getElementById("q-question").value;
+
+                    // Send form data using EmailJS
+                    emailjs.send("service_parx5cw", "template_fprm4xg", {
+                        name: name,
+                        email: email,
+                        question: question,
+                    })
+                    .then(function(response) {
+                        console.log("SUCCESS!", response.status, response.text);
+                        alert("Form submitted successfully!");
+                        document.getElementById("questionsForm").reset();
+                    }, function(error) {
+                        console.log("FAILED...", error);
+                        alert("Form submission failed. Please try again.");
+                    });
+                });
+            </script>
         </section>
 
         <section class="contact-info">
