@@ -5,10 +5,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>TPHS Peer Tutoring</title>
 
-  <!-- Assets -->
+  <!-- Fonts & global CSS -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
   <script defer src="js/script.js"></script>
+
+  <!-- Page‑specific tweaks -->
+  <style>
+    /* Falcon emblem floating in the hero corner */
+    .falcon-badge{
+      position:absolute;top:2rem;right:2rem;
+      width:120px;height:120px;object-fit:contain;
+      filter:drop-shadow(0 4px 8px rgba(0,0,0,.15));
+    }
+    @media(max-width:600px){ .falcon-badge{width:80px;height:80px;top:1rem;right:1rem;} }
+
+    /* Hero background: subtle TP red→gold gradient */
+    .banner{
+      background:linear-gradient(135deg,rgba(191,10,48,.12) 0%,rgba(255,215,0,.12) 100%);
+    }
+
+    /* Feature cards: add soft border & icon circle */
+    .feature-card{
+      border:1px solid #ececec;
+      text-align:left;
+    }
+    .feature-icon{
+      background:var(--clr-gray);
+      border-radius:50%;
+      width:48px;height:48px;
+      display:flex;align-items:center;justify-content:center;
+      font-size:1.5rem;margin-bottom:1rem;
+    }
+  </style>
 </head>
 <body>
 
@@ -22,17 +51,18 @@
         <li><a href="contact.html">Contact</a></li>
         <li><a href="gallery.html">Gallery</a></li>
       </ul>
-      <div class="burger">
-        <span></span><span></span><span></span>
-      </div>
+      <div class="burger"><span></span><span></span><span></span></div>
     </div>
   </nav>
 
   <!-- ==========  Hero  ========== -->
   <header class="banner">
+    <!-- Falcon logo -->
+    <img src="images/club-logo.png" alt="TPHS Falcon emblem" class="falcon-badge fade-in">
+
     <div class="container banner-content fade-in">
       <h1>Peer Tutoring that Unlocks Potential</h1>
-      <p>Academic support from students who’ve walked the same hallways and aced the same classes.</p>
+      <p style="max-width:580px;">Academic support from students who’ve walked the same hallways and aced the same classes.</p>
       <div class="banner-buttons">
         <a href="roster.html" class="btn btn-primary">Find a Tutor</a>
       </div>
@@ -40,7 +70,7 @@
   </header>
 
   <!-- ==========  Features  ========== -->
-  <section>
+  <section class="features-section">
     <div class="container">
       <h2 class="fade-in">Why Choose Us?</h2>
       <div class="features">
@@ -67,12 +97,12 @@
   <section style="background:#fff;">
     <div class="container fade-in">
       <h2>Our Mission</h2>
-      <p>The TPHS Peer Tutoring Club fosters academic excellence and collaboration at Torrey Pines. We believe in the power of peer‑to‑peer learning and strive to create a welcoming space where every Falcon can soar.</p>
+      <p style="max-width:800px;">The TPHS Peer Tutoring Club fosters academic excellence and collaboration at Torrey Pines. We believe in the power of peer‑to‑peer learning and strive to create a welcoming space where every Falcon can soar.</p>
 
       <h2>What We Do</h2>
-      <ul style="list-style:disc;padding-left:1.2rem;">
+      <ul style="list-style:disc;padding-left:1.4rem;max-width:800px;">
         <li>Weekly drop‑in sessions in the library.</li>
-        <li>Exam‑prep workshops before finals/standardised tests.</li>
+        <li>Exam‑prep workshops before finals and standardized tests.</li>
         <li>On‑demand 1‑to‑1 appointments.</li>
         <li>Curated study guides &amp; online resources.</li>
       </ul>
