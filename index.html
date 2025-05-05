@@ -1,65 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>TPHS Peer Tutoring</title>
-    <link rel="stylesheet" href="css/styles.css" />
-    <script defer src="js/script.js"></script>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TPHS Peer Tutoring</title>
+
+  <!-- Assets -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script defer src="js/script.js"></script>
 </head>
 <body>
-    <!-- Header Section -->
-    <header>
-        <div class="banner">
-            <!-- Background image is handled by CSS -->
-            <h1>Welcome to the TPHS Peer Tutoring Club</h1>
-            <p>Empowering students through peer-to-peer academic support.</p>
+
+  <!-- ==========  Navigation  ========== -->
+  <nav>
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">TPHS Tutoring</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="roster.html">Roster</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+      </ul>
+      <div class="burger">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==========  Hero  ========== -->
+  <header class="banner">
+    <div class="container banner-content fade-in">
+      <h1>Peer Tutoring that Unlocks Potential</h1>
+      <p>Academic support from students who’ve walked the same hallways and aced the same classes.</p>
+      <div class="banner-buttons">
+        <a href="roster.html" class="btn btn-primary">Find a Tutor</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========  Features  ========== -->
+  <section>
+    <div class="container">
+      <h2 class="fade-in">Why Choose Us?</h2>
+      <div class="features">
+        <div class="feature-card fade-in">
+          <div class="feature-icon">🎯</div>
+          <h3>Personalised Help</h3>
+          <p>One‑on‑one sessions tailored to your learning style and schedule.</p>
         </div>
-        
-        <!-- Navigation Bar -->
-        <nav>
-            <ul class="main-nav">
-                <li class="dropdown"><a href="index.html">Home</a></li>
-                <li class="dropdown"><a href="roster.html">Roster</a></li>
-                <li class="dropdown"><a href="request-tutor.html">Request a Tutor</a></li>
-                <li class="dropdown"><a href="contact.html">Contact</a></li>
-                <li class="dropdown"><a href="gallery.html">Gallery</a></li>
-            </ul>
-        </nav>
-    </header>
+        <div class="feature-card fade-in">
+          <div class="feature-icon">📚</div>
+          <h3>Wide Subject Coverage</h3>
+          <p>Math, Science, Languages, AP classes — you name it, we’ve got tutors.</p>
+        </div>
+        <div class="feature-card fade-in">
+          <div class="feature-icon">🤝</div>
+          <h3>Student‑led Community</h3>
+          <p>Learn from peers who understand the TPHS curriculum inside‑out.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Main Content -->
-    <main>
-        <section class="about-section">
-            <!-- Replace with club logo image -->
-            <img src="images/club-logo.png" alt="TPHS Peer Tutoring Club Logo" class="club-logo" />
+  <!-- ==========  About  ========== -->
+  <section style="background:#fff;">
+    <div class="container fade-in">
+      <h2>Our Mission</h2>
+      <p>The TPHS Peer Tutoring Club fosters academic excellence and collaboration at Torrey Pines. We believe in the power of peer‑to‑peer learning and strive to create a welcoming space where every Falcon can soar.</p>
 
-            <h2>Our Mission</h2>
-            <p>
-                The TPHS Peer Tutoring Club is committed to fostering academic excellence and collaboration
-                among Torrey Pines High School students. We believe in the power of peer-to-peer learning 
-                and strive to create a welcoming environment where students can receive personalized support 
-                in a variety of subjects.
-            </p>
-            
-            <h2>What We Do</h2>
-            <ul>
-                <li>Host weekly tutoring sessions in the library.</li>
-                <li>Organize review workshops before major exams.</li>
-                <li>Offer one-on-one tutoring appointments by request.</li>
-                <li>Provide online resources and study guides.</li>
-            </ul>
+      <h2>What We Do</h2>
+      <ul style="list-style:disc;padding-left:1.2rem;">
+        <li>Weekly drop‑in sessions in the library.</li>
+        <li>Exam‑prep workshops before finals/standardised tests.</li>
+        <li>On‑demand 1‑to‑1 appointments.</li>
+        <li>Curated study guides &amp; online resources.</li>
+      </ul>
+    </div>
+  </section>
 
-            <h2>News</h2>
-            <p style="text-align: center">
-                Stay tuned for further information!
-            </p>
-        </section>
-    </main>
+  <!-- ==========  Footer  ========== -->
+  <footer>
+    © 2025 TPHS Peer Tutoring Club. All Rights Reserved.
+  </footer>
 
-    <!-- Footer -->
-    <footer>
-        <p>© 2024 TPHS Peer Tutoring Club. All Rights Reserved.</p>
-    </footer>
+  <!-- Scroll‑to‑top button -->
+  <button id="toTop" aria-label="Scroll to top">▲</button>
 </body>
 </html>

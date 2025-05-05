@@ -1,44 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Gallery - TPHS Peer Tutoring</title>
-    <link rel="stylesheet" href="css/styles.css"/>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gallery – TPHS Peer Tutoring</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script defer src="js/script.js"></script>
 </head>
 <body>
-    <header>
-    </header>
 
-    <nav>
-        <ul class="main-nav">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="roster.html">Roster</a></li>
-            <li><a href="request-tutor.html">Request a Tutor</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-        </ul>
-    </nav>
+  <!-- Navigation -->
+  <nav>
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">TPHS Tutoring</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="roster.html">Roster</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+      </ul>
+      <div class="burger"><span></span><span></span><span></span></div>
+    </div>
+  </nav>
 
-    <main>
-        <section class="gallery-section">
-            <h2>Monthly Galleries</h2>
-            <div class="month-gallery">
-                <h3>December</h3>
-                <!-- Replace with a link or modal trigger -->
-                <a href="#">View December Gallery</a>
-            </div>
-            <div class="month-gallery">
-                <h3>January</h3>
-                <!-- Replace with a link or modal trigger -->
-                <a href="#">View January Gallery</a>
-            </div>
-            <!-- Add more months as needed -->
-        </section>
-    </main>
+  <main class="container">
+    <section>
+      <h2 class="fade-in" style="text-align:center;">Club Moments</h2>
 
-    <footer>
-        <p>© 2024 TPHS Peer Tutoring Club. All Rights Reserved.</p>
-    </footer>
+      <div class="gallery-grid fade-in">
+        <img src="images/gallery/2024-01.jpg" alt="January Session">
+        <img src="images/gallery/2024-02.jpg" alt="February Workshop">
+        <!-- add more -->
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 TPHS Peer Tutoring Club. All Rights Reserved.
+  </footer>
+  <button id="toTop" aria-label="Scroll to top">▲</button>
 </body>
 </html>
